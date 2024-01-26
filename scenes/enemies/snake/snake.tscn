@@ -1,0 +1,129 @@
+[gd_scene load_steps=25 format=3 uid="uid://de487fta730vk"]
+
+[ext_resource type="Script" path="res://scenes/enemies/snake/snake.gd" id="1_32ehp"]
+[ext_resource type="Texture2D" uid="uid://dek5lgcvidxbq" path="res://assets/enemies/cobra/cobra-attack1.png" id="2_uxpti"]
+[ext_resource type="Texture2D" uid="uid://ggt15mwoug30" path="res://assets/enemies/cobra/cobra-attack2.png" id="3_t1ve3"]
+[ext_resource type="Texture2D" uid="uid://b7ahqknx528o3" path="res://assets/enemies/cobra/cobra-attack3.png" id="4_oqjf5"]
+[ext_resource type="Texture2D" uid="uid://fjhrfh8g7ysl" path="res://assets/enemies/cobra/cobra-attack4.png" id="5_nghvh"]
+[ext_resource type="Texture2D" uid="uid://b7btej4rt7qsc" path="res://assets/enemies/cobra/cobra-attack5.png" id="6_u3krj"]
+[ext_resource type="Texture2D" uid="uid://c78ahw51lxlht" path="res://assets/enemies/cobra/cobra-attack6.png" id="7_veqpl"]
+[ext_resource type="Texture2D" uid="uid://jp2y2wqae3po" path="res://assets/enemies/cobra/cobra-death1.png" id="8_2yahx"]
+[ext_resource type="Texture2D" uid="uid://c7gdev554gqj5" path="res://assets/enemies/cobra/cobra-death2.png" id="9_hnt1d"]
+[ext_resource type="Texture2D" uid="uid://o1nnfofv3iws" path="res://assets/enemies/cobra/cobra-death3.png" id="10_hw42c"]
+[ext_resource type="Texture2D" uid="uid://bf320nw7qpjr5" path="res://assets/enemies/cobra/cobra-death4.png" id="11_jwr8r"]
+[ext_resource type="Texture2D" uid="uid://f6gloax3oiec" path="res://assets/enemies/cobra/cobra-death5.png" id="12_8ivrp"]
+[ext_resource type="Texture2D" uid="uid://b6mjiwby6utbj" path="res://assets/enemies/cobra/cobra-death6.png" id="13_7g3dm"]
+[ext_resource type="Texture2D" uid="uid://ckdm5duhhjpym" path="res://assets/enemies/cobra/cobra-idle1.png" id="14_jpwp6"]
+[ext_resource type="Texture2D" uid="uid://dxsct605bjkm7" path="res://assets/enemies/cobra/cobra-idle2.png" id="15_v2vgf"]
+[ext_resource type="Texture2D" uid="uid://85ihfyqjjkkn" path="res://assets/enemies/cobra/cobra-idle3.png" id="16_hkien"]
+[ext_resource type="Texture2D" uid="uid://vkvyxx4l2r0l" path="res://assets/enemies/cobra/cobra-idle4.png" id="17_mn2hk"]
+[ext_resource type="Texture2D" uid="uid://cbfl3ue3mivt6" path="res://assets/enemies/cobra/cobra-idle5.png" id="18_ht8d0"]
+[ext_resource type="Texture2D" uid="uid://d2akgbu7obf3f" path="res://assets/enemies/cobra/cobra-idle6.png" id="19_51ysy"]
+[ext_resource type="Texture2D" uid="uid://d1wum8i6tefh8" path="res://assets/enemies/cobra/cobra-idle7.png" id="20_un25b"]
+[ext_resource type="Texture2D" uid="uid://5e40tjidyta2" path="res://assets/enemies/cobra/cobra-idle8.png" id="21_b7jpv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wwqd4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uxpti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t1ve3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oqjf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nghvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u3krj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_veqpl")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2yahx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hnt1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hw42c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jwr8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8ivrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7g3dm")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_jpwp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v2vgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hkien")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mn2hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ht8d0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_51ysy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_un25b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_b7jpv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cgukq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s60h1"]
+size = Vector2(199, 20)
+
+[node name="Snake" type="Area2D"]
+script = ExtResource("1_32ehp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wwqd4")
+animation = &"Attack"
+frame = 4
+frame_progress = 0.099487
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 10)
+shape = SubResource("CircleShape2D_cgukq")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+position = Vector2(-4, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_s60h1")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

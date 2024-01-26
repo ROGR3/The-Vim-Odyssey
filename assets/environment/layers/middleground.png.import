@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://d00obve6a26v3"
+path="res://.godot/imported/middleground.png-9b61c8a773d468d304a1a338ce89327c.image"
+
+[deps]
+
+source_file="res://assets/environment/layers/middleground.png"
+dest_files=["res://.godot/imported/middleground.png-9b61c8a773d468d304a1a338ce89327c.image"]
+
+[params]
+

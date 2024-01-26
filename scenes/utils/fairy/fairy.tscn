@@ -1,0 +1,112 @@
+[gd_scene load_steps=20 format=3 uid="uid://b4be2kxn664tw"]
+
+[ext_resource type="Texture2D" uid="uid://dyacrg3cupy8" path="res://assets/Fairy/idle0.png" id="1_s7rb4"]
+[ext_resource type="Script" path="res://scenes/utils/fairy/fairy.gd" id="1_sgnuh"]
+[ext_resource type="Texture2D" uid="uid://cyl6g0qslla1y" path="res://assets/Fairy/idle1.png" id="2_de2vh"]
+[ext_resource type="Texture2D" uid="uid://c6n3j4gu8ssmp" path="res://assets/Fairy/tile009.png" id="2_oulpr"]
+[ext_resource type="Texture2D" uid="uid://bls44vqwpd5uh" path="res://assets/Fairy/idle2.png" id="3_fmalm"]
+[ext_resource type="Texture2D" uid="uid://b06m0e4xqk4a8" path="res://assets/Fairy/tile010.png" id="3_nww64"]
+[ext_resource type="Texture2D" uid="uid://b5lee3uc4y2d0" path="res://assets/Fairy/tile011.png" id="4_6none"]
+[ext_resource type="Texture2D" uid="uid://dncq37kxg0xy3" path="res://assets/Fairy/idle3.png" id="4_s3onc"]
+[ext_resource type="Texture2D" uid="uid://b3lpvrox7aatk" path="res://assets/Fairy/tile012.png" id="5_2j0pr"]
+[ext_resource type="Texture2D" uid="uid://dh3cdq1pdeai6" path="res://assets/Fairy/idle4.png" id="5_th6yh"]
+[ext_resource type="Texture2D" uid="uid://6j66rsfcs5op" path="res://assets/Fairy/tile013.png" id="6_87sd0"]
+[ext_resource type="Texture2D" uid="uid://7esjrfwkxemw" path="res://assets/Fairy/idle5.png" id="6_pc8c1"]
+[ext_resource type="Texture2D" uid="uid://ckon3c5oiik0e" path="res://assets/Fairy/tile014.png" id="7_2ht3m"]
+[ext_resource type="Texture2D" uid="uid://doa6da1f2xe3c" path="res://assets/Fairy/spell0.png" id="7_inr32"]
+[ext_resource type="Texture2D" uid="uid://bwx74xmx3wulw" path="res://assets/Fairy/spell1.png" id="8_gtl4b"]
+[ext_resource type="PackedScene" uid="uid://ba8o8e77mq4w2" path="res://scenes/utils/speech_bubble/speech_bubble.tscn" id="16_6atka"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtbtb"]
+size = Vector2(170, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36oxo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oulpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nww64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6none")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2j0pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_87sd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2ht3m")
+}],
+"loop": true,
+"name": &"Chase",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s7rb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_de2vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fmalm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s3onc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_th6yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pc8c1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_inr32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gtl4b")
+}],
+"loop": true,
+"name": &"Spell",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0damb"]
+radius = 2.0
+height = 16.0
+
+[node name="Fairy" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_sgnuh")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+position = Vector2(0, 9.53674e-07)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(14, 62)
+shape = SubResource("RectangleShape2D_xtbtb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9.53674e-07, -5)
+scale = Vector2(0.662162, 0.662162)
+sprite_frames = SubResource("SpriteFrames_36oxo")
+animation = &"Chase"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("CapsuleShape2D_0damb")
+
+[node name="SpeechBubble" parent="." instance=ExtResource("16_6atka")]
+position = Vector2(5, -41)
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

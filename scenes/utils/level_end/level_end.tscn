@@ -1,0 +1,139 @@
+[gd_scene load_steps=28 format=3 uid="uid://bbalnr2lsvp5o"]
+
+[ext_resource type="Script" path="res://scenes/utils/level_end/level_end.gd" id="1_ra48u"]
+[ext_resource type="Texture2D" uid="uid://bsfhslysha8bu" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp1.png" id="2_xayu3"]
+[ext_resource type="Texture2D" uid="uid://cv8yxav3dtctb" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp2.png" id="3_s5s5m"]
+[ext_resource type="Texture2D" uid="uid://csvdbprch3di" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp3.png" id="4_o5rr5"]
+[ext_resource type="Texture2D" uid="uid://dcleuvdxpow2u" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp4.png" id="5_adjo5"]
+[ext_resource type="Texture2D" uid="uid://boxx4croxt64p" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp5.png" id="6_k37v3"]
+[ext_resource type="Texture2D" uid="uid://dnd3uyvqnlv8t" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp6.png" id="7_dbl8e"]
+[ext_resource type="Texture2D" uid="uid://bufiweawsx330" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp7.png" id="8_sgukm"]
+[ext_resource type="Texture2D" uid="uid://dyb8v1f7p5yuv" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp8.png" id="9_xrjr5"]
+[ext_resource type="Texture2D" uid="uid://mqyhhdf4tyw2" path="res://assets/miscs/Portals/Green Portal/Green Porta_dsp9.png" id="10_bs1gj"]
+[ext_resource type="Texture2D" uid="uid://h7v53u3uv1x7" path="res://assets/miscs/Portals/Green Portal/Green Porta_idlet1.png" id="11_u2h0w"]
+[ext_resource type="Texture2D" uid="uid://qgkkqj21v5t4" path="res://assets/miscs/Portals/Green Portal/Green Porta_idlet2.png" id="12_oav3f"]
+[ext_resource type="Texture2D" uid="uid://xv1oy8ibu6ri" path="res://assets/miscs/Portals/Green Portal/Green Porta_idlet3.png" id="13_i88dl"]
+[ext_resource type="Texture2D" uid="uid://caiqc4e1j3qjl" path="res://assets/miscs/Portals/Green Portal/Green Porta_idlet4.png" id="14_mogoi"]
+[ext_resource type="Texture2D" uid="uid://dd1jcv8xfvubr" path="res://assets/miscs/Portals/Green Portal/Green Porta_idlet5.png" id="15_5uyyl"]
+[ext_resource type="Texture2D" uid="uid://bu6orduo8yh51" path="res://assets/miscs/Portals/Green Portal/Green Porta_idlet6.png" id="16_2bbad"]
+[ext_resource type="Texture2D" uid="uid://dntjwmyibnjhe" path="res://assets/miscs/Portals/Green Portal/Green Porta_idlet7.png" id="17_na2q3"]
+[ext_resource type="Texture2D" uid="uid://c5rkkph8likf6" path="res://assets/miscs/Portals/Green Portal/Green Porta_idlet8.png" id="18_kwshn"]
+[ext_resource type="Texture2D" uid="uid://bgrtfkgu7sb3s" path="res://assets/miscs/Portals/Green Portal/Green Porta_spawn1.png" id="19_mu1pn"]
+[ext_resource type="Texture2D" uid="uid://b27er644qj60c" path="res://assets/miscs/Portals/Green Portal/Green Porta_spawn2.png" id="20_k2syt"]
+[ext_resource type="Texture2D" uid="uid://dumh21kh0857x" path="res://assets/miscs/Portals/Green Portal/Green Porta_spawn3.png" id="21_bl36l"]
+[ext_resource type="Texture2D" uid="uid://8p0vitt5drfr" path="res://assets/miscs/Portals/Green Portal/Green Porta_spawn4.png" id="22_n0ecm"]
+[ext_resource type="Texture2D" uid="uid://lrcj1njmspx5" path="res://assets/miscs/Portals/Green Portal/Green Porta_spawn5.png" id="23_drico"]
+[ext_resource type="Texture2D" uid="uid://dwjvtj637bkoc" path="res://assets/miscs/Portals/Green Portal/Green Porta_spawn6.png" id="24_wd1r1"]
+[ext_resource type="Texture2D" uid="uid://dfiwrqfuge2st" path="res://assets/miscs/Portals/Green Portal/Green Porta_spawn7.png" id="25_rr0jv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8nxvy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xayu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s5s5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o5rr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_adjo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_k37v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dbl8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sgukm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xrjr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bs1gj")
+}],
+"loop": false,
+"name": &"Dissapear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_u2h0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oav3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_i88dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mogoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5uyyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2bbad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_na2q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kwshn")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_mu1pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_k2syt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_bl36l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_n0ecm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_drico")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wd1r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_rr0jv")
+}],
+"loop": false,
+"name": &"Spawn",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjnwu"]
+size = Vector2(22, 48)
+
+[node name="LevelEnd" type="Area2D"]
+script = ExtResource("1_ra48u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -3.14159
+sprite_frames = SubResource("SpriteFrames_8nxvy")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -5)
+shape = SubResource("RectangleShape2D_tjnwu")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -4.5)
+scale = Vector2(2.24999, 2.45)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

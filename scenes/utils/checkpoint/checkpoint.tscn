@@ -1,0 +1,99 @@
+[gd_scene load_steps=22 format=3 uid="uid://s4kos0ysralm"]
+
+[ext_resource type="Script" path="res://scenes/utils/checkpoint/checkpoint.gd" id="1_c0cid"]
+[ext_resource type="Texture2D" uid="uid://beg22s50a0rub" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk1.png" id="2_wmh47"]
+[ext_resource type="Texture2D" uid="uid://d0hlj0tkeuhrn" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk2.png" id="3_u1xq8"]
+[ext_resource type="Texture2D" uid="uid://cdtaf38tb2okw" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk3.png" id="4_o5fmm"]
+[ext_resource type="Texture2D" uid="uid://75kj3arkkmow" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk4.png" id="5_13t7u"]
+[ext_resource type="Texture2D" uid="uid://bnu0eyg61fptl" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk5.png" id="6_mb5jv"]
+[ext_resource type="Texture2D" uid="uid://o4muxit6vw1s" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk6.png" id="7_cx36x"]
+[ext_resource type="Texture2D" uid="uid://bnkwkelhby1b5" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk7.png" id="8_4jrf6"]
+[ext_resource type="Texture2D" uid="uid://c1pfmkqal7lwa" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk8.png" id="9_vpccl"]
+[ext_resource type="Texture2D" uid="uid://ccde0an8km4ie" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk9.png" id="10_hdcfm"]
+[ext_resource type="Texture2D" uid="uid://ctsr64ydg4odu" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk10.png" id="11_f0xjf"]
+[ext_resource type="Texture2D" uid="uid://c57eno2qap6tw" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk11.png" id="12_vt5gl"]
+[ext_resource type="Texture2D" uid="uid://igjfwgku7v3i" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk12.png" id="13_8e6ql"]
+[ext_resource type="Texture2D" uid="uid://boweg17elngcb" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk13.png" id="14_vno42"]
+[ext_resource type="Texture2D" uid="uid://c8jwxiob1a8te" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk14.png" id="15_iwdmm"]
+[ext_resource type="Texture2D" uid="uid://bhlr0hijvm6d2" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk15.png" id="16_qb1n3"]
+[ext_resource type="Texture2D" uid="uid://djwavxwfda5hy" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk16.png" id="17_arcta"]
+[ext_resource type="Texture2D" uid="uid://c2clwt6gje05q" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk17.png" id="18_36far"]
+[ext_resource type="Texture2D" uid="uid://bqvi1nil6krqh" path="res://assets/miscs/Checkpoint/Spinning-Floppy-Disk18.png" id="19_l0crp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_trb5c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_njqkl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wmh47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1xq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o5fmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_13t7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mb5jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cx36x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4jrf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vpccl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hdcfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f0xjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vt5gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8e6ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vno42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_iwdmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qb1n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_arcta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_36far")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l0crp")
+}],
+"loop": true,
+"name": &"Saved",
+"speed": 10.0
+}]
+
+[node name="Checkpoint" type="Area2D"]
+script = ExtResource("1_c0cid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_trb5c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_njqkl")
+animation = &"Saved"
+frame = 2
+frame_progress = 0.310243
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

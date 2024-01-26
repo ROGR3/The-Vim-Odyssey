@@ -1,0 +1,143 @@
+[gd_scene load_steps=26 format=3 uid="uid://4jr0we5w1aw7"]
+
+[ext_resource type="Script" path="res://scenes/utils/level_end/sub_level_end.gd" id="1_71rur"]
+[ext_resource type="Texture2D" uid="uid://bhq6txrwdni76" path="res://assets/miscs/Portals/Purple Portal/portal-disapear1.png" id="2_cwiby"]
+[ext_resource type="Texture2D" uid="uid://der38pu4bdx3i" path="res://assets/miscs/Portals/Purple Portal/portal-idle1.png" id="2_g7j1x"]
+[ext_resource type="Texture2D" uid="uid://ceh6wnvgh8xlp" path="res://assets/miscs/Portals/Purple Portal/portal-disapear2.png" id="3_ayhev"]
+[ext_resource type="Texture2D" uid="uid://b2ilpfl6qcyta" path="res://assets/miscs/Portals/Purple Portal/portal-idle2.png" id="3_miekr"]
+[ext_resource type="Texture2D" uid="uid://dskogbcdx77c5" path="res://assets/miscs/Portals/Purple Portal/portal-disapear3.png" id="4_qgb83"]
+[ext_resource type="Texture2D" uid="uid://c4kgbaww0wrwh" path="res://assets/miscs/Portals/Purple Portal/portal-idle3.png" id="4_wc7f0"]
+[ext_resource type="Texture2D" uid="uid://db3g2srjtcuaj" path="res://assets/miscs/Portals/Purple Portal/portal-disapear4.png" id="5_ev2c7"]
+[ext_resource type="Texture2D" uid="uid://d1ow1kaytjogn" path="res://assets/miscs/Portals/Purple Portal/portal-idle4.png" id="5_liefy"]
+[ext_resource type="Texture2D" uid="uid://b8uud0lq0x31i" path="res://assets/miscs/Portals/Purple Portal/portal-disapear5.png" id="6_3oe8u"]
+[ext_resource type="Texture2D" uid="uid://bplbrhcy0ww6m" path="res://assets/miscs/Portals/Purple Portal/portal-idle5.png" id="6_frym6"]
+[ext_resource type="Texture2D" uid="uid://crgnpdpd4xpym" path="res://assets/miscs/Portals/Purple Portal/portal-idle6.png" id="7_3i353"]
+[ext_resource type="Texture2D" uid="uid://3ogd4vd4dwlk" path="res://assets/miscs/Portals/Purple Portal/portal-disapear6.png" id="7_r5ftf"]
+[ext_resource type="Texture2D" uid="uid://8ns4at2y1pd8" path="res://assets/miscs/Portals/Purple Portal/portal-idle7.png" id="8_kph8s"]
+[ext_resource type="Texture2D" uid="uid://cbbrlt7nsyhmy" path="res://assets/miscs/Portals/Purple Portal/portal-idle8.png" id="9_do1rt"]
+[ext_resource type="Texture2D" uid="uid://b4inhl1j6fd01" path="res://assets/miscs/Portals/Purple Portal/portal-spawn1.png" id="10_p54hx"]
+[ext_resource type="Texture2D" uid="uid://crwirm6ipkjms" path="res://assets/miscs/Portals/Purple Portal/portal-spawn2.png" id="11_58ltg"]
+[ext_resource type="Texture2D" uid="uid://cuqc3homfk6qj" path="res://assets/miscs/Portals/Purple Portal/portal-spawn3.png" id="12_q53xo"]
+[ext_resource type="Texture2D" uid="uid://bagy4oufeb5ot" path="res://assets/miscs/Portals/Purple Portal/portal-spawn4.png" id="13_oy6w1"]
+[ext_resource type="Texture2D" uid="uid://dafsfkaa1pdwc" path="res://assets/miscs/Portals/Purple Portal/portal-spawn5.png" id="14_37ohr"]
+[ext_resource type="Texture2D" uid="uid://drdbmd0tjwqki" path="res://assets/miscs/Portals/Purple Portal/portal-spawn6.png" id="15_13skg"]
+[ext_resource type="Texture2D" uid="uid://cck1l6tt8piis" path="res://assets/miscs/Portals/Purple Portal/portal-spawn7.png" id="16_o2tka"]
+[ext_resource type="Texture2D" uid="uid://bf4o1yukhjek8" path="res://assets/miscs/Portals/Purple Portal/portal-spawn8.png" id="17_nl5n2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8nxvy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g7j1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_miekr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wc7f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_liefy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cwiby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ayhev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qgb83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ev2c7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3oe8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r5ftf")
+}],
+"loop": false,
+"name": &"Dissapear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g7j1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_miekr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wc7f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_liefy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_frym6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3i353")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kph8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_do1rt")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_p54hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_58ltg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q53xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oy6w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_37ohr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_13skg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o2tka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nl5n2")
+}],
+"loop": false,
+"name": &"Spawn",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjnwu"]
+size = Vector2(23, 44)
+
+[node name="SubLevelEnd" type="Area2D"]
+script = ExtResource("1_71rur")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -3.14159
+sprite_frames = SubResource("SpriteFrames_8nxvy")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -4)
+shape = SubResource("RectangleShape2D_tjnwu")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0.833549, -4)
+scale = Vector2(2.24999, 2.2)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

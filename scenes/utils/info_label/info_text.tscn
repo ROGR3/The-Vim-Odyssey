@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://5mnao4w5s2sr"]
+
+[ext_resource type="Script" path="res://scenes/utils/info_label/info_text.gd" id="1_udoia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdyas"]
+size = Vector2(3.25, 241)
+
+[node name="InfoText" type="Area2D"]
+script = ExtResource("1_udoia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.625, 119)
+shape = SubResource("RectangleShape2D_cdyas")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

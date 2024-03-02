@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d4dwq7fjtkaaa"]
 
 [ext_resource type="Script" path="res://scenes/map.gd" id="1_a7tkb"]
-[ext_resource type="Texture2D" uid="uid://cs602r01in8kb" path="res://assets/Player/adventurer-Sheet.png" id="1_qrq0x"]
+[ext_resource type="Texture2D" uid="uid://cs602r01in8kb" path="res://assets/player/adventurer-Sheet.png" id="1_qrq0x"]
 [ext_resource type="Texture2D" uid="uid://3q7s1nwn7s4s" path="res://assets/environment/props/mushroom-brown.png" id="2_0datj"]
 [ext_resource type="PackedScene" uid="uid://bi8fchjw7gqrb" path="res://scenes/utils/controls/level_select_button.tscn" id="2_uxqmg"]
 

@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://o1nnfofv3iws" path="res://assets/enemies/cobra/cobra-death3.png" id="10_hw42c"]
 [ext_resource type="Texture2D" uid="uid://bf320nw7qpjr5" path="res://assets/enemies/cobra/cobra-death4.png" id="11_jwr8r"]
 [ext_resource type="Texture2D" uid="uid://f6gloax3oiec" path="res://assets/enemies/cobra/cobra-death5.png" id="12_8ivrp"]
-[ext_resource type="Texture2D" uid="uid://b6mjiwby6utbj" path="res://assets/enemies/cobra/cobra-death6.png" id="13_7g3dm"]
 [ext_resource type="Texture2D" uid="uid://ckdm5duhhjpym" path="res://assets/enemies/cobra/cobra-idle1.png" id="14_jpwp6"]
 [ext_resource type="Texture2D" uid="uid://dxsct605bjkm7" path="res://assets/enemies/cobra/cobra-idle2.png" id="15_v2vgf"]
 [ext_resource type="Texture2D" uid="uid://85ihfyqjjkkn" path="res://assets/enemies/cobra/cobra-idle3.png" id="16_hkien"]
@@ -20,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cbfl3ue3mivt6" path="res://assets/enemies/cobra/cobra-idle5.png" id="18_ht8d0"]
 [ext_resource type="Texture2D" uid="uid://d2akgbu7obf3f" path="res://assets/enemies/cobra/cobra-idle6.png" id="19_51ysy"]
 [ext_resource type="Texture2D" uid="uid://d1wum8i6tefh8" path="res://assets/enemies/cobra/cobra-idle7.png" id="20_un25b"]
+[ext_resource type="PackedScene" uid="uid://dq8us873u3yup" path="res://scenes/enemies/hitpoints/hitpoints.tscn" id="21_3bd8h"]
 [ext_resource type="Texture2D" uid="uid://5e40tjidyta2" path="res://assets/enemies/cobra/cobra-idle8.png" id="21_b7jpv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wwqd4"]
@@ -62,9 +62,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_8ivrp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_7g3dm")
 }],
 "loop": false,
 "name": &"Death",
@@ -100,30 +97,42 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cgukq"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s60h1"]
-size = Vector2(199, 20)
+size = Vector2(90, 20)
 
-[node name="Snake" type="Area2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u61o4"]
+radius = 7.0
+height = 14.0
+
+[node name="Snake" type="CharacterBody2D"]
 script = ExtResource("1_32ehp")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2DLeft" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -9)
 sprite_frames = SubResource("SpriteFrames_wwqd4")
 animation = &"Attack"
-frame = 4
-frame_progress = 0.099487
+frame_progress = 0.271567
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, 10)
-shape = SubResource("CircleShape2D_cgukq")
+[node name="AnimatedSprite2DRight" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(2, -9)
+sprite_frames = SubResource("SpriteFrames_wwqd4")
+animation = &"Attack"
+frame_progress = 0.271567
 
 [node name="PlayerDetection" type="Area2D" parent="."]
-position = Vector2(-4, 11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(2.5, 0)
 shape = SubResource("RectangleShape2D_s60h1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_u61o4")
+
+[node name="Hitpoints" parent="." instance=ExtResource("21_3bd8h")]
+visible = false
+position = Vector2(-8, -21)
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="area_entered" from="Hitpoints" to="." method="_on_hitpoints_area_entered"]

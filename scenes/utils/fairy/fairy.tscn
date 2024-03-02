@@ -1,21 +1,32 @@
-[gd_scene load_steps=20 format=3 uid="uid://b4be2kxn664tw"]
+[gd_scene load_steps=31 format=3 uid="uid://b4be2kxn664tw"]
 
-[ext_resource type="Texture2D" uid="uid://dyacrg3cupy8" path="res://assets/Fairy/idle0.png" id="1_s7rb4"]
 [ext_resource type="Script" path="res://scenes/utils/fairy/fairy.gd" id="1_sgnuh"]
-[ext_resource type="Texture2D" uid="uid://cyl6g0qslla1y" path="res://assets/Fairy/idle1.png" id="2_de2vh"]
-[ext_resource type="Texture2D" uid="uid://c6n3j4gu8ssmp" path="res://assets/Fairy/tile009.png" id="2_oulpr"]
-[ext_resource type="Texture2D" uid="uid://bls44vqwpd5uh" path="res://assets/Fairy/idle2.png" id="3_fmalm"]
-[ext_resource type="Texture2D" uid="uid://b06m0e4xqk4a8" path="res://assets/Fairy/tile010.png" id="3_nww64"]
-[ext_resource type="Texture2D" uid="uid://b5lee3uc4y2d0" path="res://assets/Fairy/tile011.png" id="4_6none"]
-[ext_resource type="Texture2D" uid="uid://dncq37kxg0xy3" path="res://assets/Fairy/idle3.png" id="4_s3onc"]
-[ext_resource type="Texture2D" uid="uid://b3lpvrox7aatk" path="res://assets/Fairy/tile012.png" id="5_2j0pr"]
-[ext_resource type="Texture2D" uid="uid://dh3cdq1pdeai6" path="res://assets/Fairy/idle4.png" id="5_th6yh"]
-[ext_resource type="Texture2D" uid="uid://6j66rsfcs5op" path="res://assets/Fairy/tile013.png" id="6_87sd0"]
-[ext_resource type="Texture2D" uid="uid://7esjrfwkxemw" path="res://assets/Fairy/idle5.png" id="6_pc8c1"]
-[ext_resource type="Texture2D" uid="uid://ckon3c5oiik0e" path="res://assets/Fairy/tile014.png" id="7_2ht3m"]
-[ext_resource type="Texture2D" uid="uid://doa6da1f2xe3c" path="res://assets/Fairy/spell0.png" id="7_inr32"]
-[ext_resource type="Texture2D" uid="uid://bwx74xmx3wulw" path="res://assets/Fairy/spell1.png" id="8_gtl4b"]
+[ext_resource type="Texture2D" uid="uid://chs1hytchkhv0" path="res://assets/fairy/fairy_Cast7.png" id="2_m6nyf"]
+[ext_resource type="Texture2D" uid="uid://uo42mu33eac8" path="res://assets/fairy/fairy_Cast8.png" id="3_u1x8h"]
+[ext_resource type="Texture2D" uid="uid://bt3qbsg6g4orw" path="res://assets/fairy/fairy_Cast9.png" id="4_r56tf"]
+[ext_resource type="Texture2D" uid="uid://d3lsslecvjavu" path="res://assets/fairy/fairy_Follow10.png" id="5_6yohe"]
+[ext_resource type="Texture2D" uid="uid://clc03yovng7vi" path="res://assets/fairy/fairy_Follow11.png" id="6_4nci2"]
+[ext_resource type="Texture2D" uid="uid://du8s23grt3bkx" path="res://assets/fairy/fairy_Follow12.png" id="7_iui78"]
+[ext_resource type="Texture2D" uid="uid://cqqhs52602npj" path="res://assets/fairy/fairy_Follow13.png" id="8_tws5r"]
+[ext_resource type="Texture2D" uid="uid://cyign4svnqeu8" path="res://assets/fairy/fairy_Follow14.png" id="9_mn4io"]
+[ext_resource type="Texture2D" uid="uid://c1a5e80e42wut" path="res://assets/fairy/fairy_Follow15.png" id="10_fq7h4"]
+[ext_resource type="Texture2D" uid="uid://bmefokme8ken0" path="res://assets/fairy/fairy_Idle1.png" id="11_430nh"]
+[ext_resource type="Texture2D" uid="uid://dglt3e0t3j1k3" path="res://assets/fairy/fairy_Idle2.png" id="12_4pw6g"]
+[ext_resource type="Texture2D" uid="uid://c11wyg5g35442" path="res://assets/fairy/fairy_Idle3.png" id="13_pqxaw"]
+[ext_resource type="Texture2D" uid="uid://djhoooo3hlqi1" path="res://assets/fairy/fairy_Idle4.png" id="14_o5fx1"]
+[ext_resource type="Texture2D" uid="uid://ebkwnskoq5yw" path="res://assets/fairy/fairy_Idle5.png" id="15_ynfnc"]
 [ext_resource type="PackedScene" uid="uid://ba8o8e77mq4w2" path="res://scenes/utils/speech_bubble/speech_bubble.tscn" id="16_6atka"]
+[ext_resource type="Texture2D" uid="uid://bvsctald7xdkx" path="res://assets/fairy/fairy_Idle6.png" id="16_t5usx"]
+[ext_resource type="Texture2D" uid="uid://c70ellsfh6fwb" path="res://assets/fairy/fairy_Spawn19.png" id="17_crbtk"]
+[ext_resource type="Texture2D" uid="uid://bltk3ss4755qn" path="res://assets/fairy/fairy_Spawn20.png" id="18_l15uv"]
+[ext_resource type="Texture2D" uid="uid://cpmgf3y3baems" path="res://assets/fairy/fairy_Spawn21.png" id="19_4af3f"]
+[ext_resource type="Texture2D" uid="uid://bc0wo0is3bwf3" path="res://assets/fairy/fairy_Spawn22.png" id="20_noyyr"]
+[ext_resource type="Texture2D" uid="uid://bkmmx0nx2f5pp" path="res://assets/fairy/fairy_Spawn23.png" id="21_kivwj"]
+[ext_resource type="Texture2D" uid="uid://7i1h2eyuqvu6" path="res://assets/fairy/fairy_Spawn24.png" id="22_60sw5"]
+[ext_resource type="Texture2D" uid="uid://babfk87i18un3" path="res://assets/fairy/fairy_Spawn25.png" id="23_g3cfd"]
+[ext_resource type="Texture2D" uid="uid://bxn54h5u7yhfp" path="res://assets/fairy/fairy_Spawn26.png" id="24_bhvje"]
+[ext_resource type="Texture2D" uid="uid://7icuht8gcobv" path="res://assets/fairy/fairy_Spawn27.png" id="25_ppao6"]
+[ext_resource type="PackedScene" uid="uid://bhtcpj3wi6w1b" path="res://scenes/utils/fairy/spell_cast.tscn" id="27_04a1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtbtb"]
 size = Vector2(170, 200)
@@ -24,22 +35,36 @@ size = Vector2(170, 200)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_oulpr")
+"texture": ExtResource("2_m6nyf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_nww64")
+"texture": ExtResource("3_u1x8h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_6none")
+"texture": ExtResource("4_r56tf")
+}],
+"loop": false,
+"name": &"Cast",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6yohe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_2j0pr")
+"texture": ExtResource("6_4nci2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_87sd0")
+"texture": ExtResource("7_iui78")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_2ht3m")
+"texture": ExtResource("8_tws5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mn4io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fq7h4")
 }],
 "loop": true,
 "name": &"Chase",
@@ -47,22 +72,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_s7rb4")
+"texture": ExtResource("11_430nh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_de2vh")
+"texture": ExtResource("12_4pw6g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_fmalm")
+"texture": ExtResource("13_pqxaw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_s3onc")
+"texture": ExtResource("14_o5fx1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_th6yh")
+"texture": ExtResource("15_ynfnc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_pc8c1")
+"texture": ExtResource("16_t5usx")
 }],
 "loop": true,
 "name": &"Idle",
@@ -70,14 +95,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_inr32")
+"texture": ExtResource("17_crbtk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_gtl4b")
+"texture": ExtResource("18_l15uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4af3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_noyyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kivwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_60sw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_g3cfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_bhvje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ppao6")
 }],
-"loop": true,
-"name": &"Spell",
-"speed": 5.0
+"loop": false,
+"name": &"Spawn",
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0damb"]
@@ -99,7 +145,7 @@ shape = SubResource("RectangleShape2D_xtbtb")
 position = Vector2(-9.53674e-07, -5)
 scale = Vector2(0.662162, 0.662162)
 sprite_frames = SubResource("SpriteFrames_36oxo")
-animation = &"Chase"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11)
@@ -107,6 +153,9 @@ shape = SubResource("CapsuleShape2D_0damb")
 
 [node name="SpeechBubble" parent="." instance=ExtResource("16_6atka")]
 position = Vector2(5, -41)
+
+[node name="SpellCast" parent="." instance=ExtResource("27_04a1i")]
+visible = false
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

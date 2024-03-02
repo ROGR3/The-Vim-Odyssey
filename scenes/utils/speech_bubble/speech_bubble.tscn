@@ -10,9 +10,12 @@ offset_right = 40.0
 offset_bottom = 15.0
 
 [node name="Label" type="RichTextLabel" parent="."]
-offset_right = 158.0
-offset_bottom = 27.0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 168.0
+offset_bottom = 19.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/normal_font_size = 7
+fit_content = true
 scroll_active = false
-shortcut_keys_enabled = false
+autowrap_mode = 0

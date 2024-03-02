@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cxcoyuhdvap2j"]
+
+[ext_resource type="Texture2D" uid="uid://df75buxwp584o" path="res://assets/tiles/dynamic_tilemap.png" id="1_k3yo7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6jc25"]
+texture = ExtResource("1_k3yo7")
+3:0/0 = 0
+3:0/0/custom_data_0 = &"Water"
+
+[resource]
+resource_name = "dynamic_tile_set"
+custom_data_layer_0/name = "Cell Type"
+custom_data_layer_0/type = 21
+sources/0 = SubResource("TileSetAtlasSource_6jc25")

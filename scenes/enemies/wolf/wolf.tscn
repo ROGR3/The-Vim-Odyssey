@@ -1,0 +1,184 @@
+[gd_scene load_steps=35 format=3 uid="uid://n8mh387bx6iw"]
+
+[ext_resource type="Texture2D" uid="uid://bbc86n8n4vsd8" path="res://assets/enemies/wolf/wolf_attack1.png" id="1_5awda"]
+[ext_resource type="Script" path="res://scenes/enemies/wolf/wolf.gd" id="1_7m52j"]
+[ext_resource type="Texture2D" uid="uid://maa0jtqbavwk" path="res://assets/enemies/wolf/wolf_attack2.png" id="2_8rodg"]
+[ext_resource type="Texture2D" uid="uid://b8hrjrpg7oeuy" path="res://assets/enemies/wolf/wolf_attack3.png" id="3_hxn4s"]
+[ext_resource type="Texture2D" uid="uid://dyppwvma4ugs3" path="res://assets/enemies/wolf/wolf_attack4.png" id="4_tjaio"]
+[ext_resource type="Texture2D" uid="uid://ebljagxf0osl" path="res://assets/enemies/wolf/wolf_attack5.png" id="5_t3ba3"]
+[ext_resource type="Texture2D" uid="uid://iuvowoqqi5ln" path="res://assets/enemies/wolf/wolf_attack6.png" id="6_pcg4x"]
+[ext_resource type="Texture2D" uid="uid://eholwa4au1ir" path="res://assets/enemies/wolf/wolf_attack7.png" id="7_qnah1"]
+[ext_resource type="Texture2D" uid="uid://ikiwgnh3tdvy" path="res://assets/enemies/wolf/wolf_death1.png" id="8_2cr1u"]
+[ext_resource type="Texture2D" uid="uid://ebrhbpa57hxm" path="res://assets/enemies/wolf/wolf_death2.png" id="9_u1yu1"]
+[ext_resource type="Texture2D" uid="uid://ckwsgbcqvpqv0" path="res://assets/enemies/wolf/wolf_death3.png" id="10_mi420"]
+[ext_resource type="Texture2D" uid="uid://o0f8onpr12ci" path="res://assets/enemies/wolf/wolf_death4.png" id="11_1kwkx"]
+[ext_resource type="Texture2D" uid="uid://be87imw0nu38t" path="res://assets/enemies/wolf/wolf_death5.png" id="12_e7yqn"]
+[ext_resource type="Texture2D" uid="uid://dlytl2jvaqamv" path="res://assets/enemies/wolf/wolf_death6.png" id="13_fqw6f"]
+[ext_resource type="Texture2D" uid="uid://b4i4r5lvjfx2b" path="res://assets/enemies/wolf/wolf_death7.png" id="14_dag1b"]
+[ext_resource type="Texture2D" uid="uid://cisyhen21nqpe" path="res://assets/enemies/wolf/wolf_death8.png" id="15_v31fk"]
+[ext_resource type="Texture2D" uid="uid://lt5083eefs12" path="res://assets/enemies/wolf/wolf_hit1.png" id="16_5dldl"]
+[ext_resource type="Texture2D" uid="uid://dukxq3b41cg4b" path="res://assets/enemies/wolf/wolf_hit2.png" id="17_3fh80"]
+[ext_resource type="Texture2D" uid="uid://cnpny4cu7jis0" path="res://assets/enemies/wolf/wolf_hit3.png" id="18_3vrhx"]
+[ext_resource type="Texture2D" uid="uid://bd8k8xs8kkahq" path="res://assets/enemies/wolf/wolf_hit4.png" id="19_ylqew"]
+[ext_resource type="Texture2D" uid="uid://dh5n6k4ds3xr5" path="res://assets/enemies/wolf/wolf_idle1.png" id="20_kyju4"]
+[ext_resource type="Texture2D" uid="uid://br8rbufdpkc0v" path="res://assets/enemies/wolf/wolf_idle2.png" id="21_s0ldg"]
+[ext_resource type="Texture2D" uid="uid://dw3sfwv6gw7bo" path="res://assets/enemies/wolf/wolf_idle3.png" id="22_ug1yn"]
+[ext_resource type="Texture2D" uid="uid://bffsnmuhnhy3n" path="res://assets/enemies/wolf/wolf_idle4.png" id="23_7uk64"]
+[ext_resource type="Texture2D" uid="uid://drac2ttaiy2ti" path="res://assets/enemies/wolf/wolf_run1.png" id="24_a0unq"]
+[ext_resource type="Texture2D" uid="uid://b24vntuwvn1js" path="res://assets/enemies/wolf/wolf_run2.png" id="25_kokem"]
+[ext_resource type="Texture2D" uid="uid://dbawyxynvat78" path="res://assets/enemies/wolf/wolf_run3.png" id="26_leb3w"]
+[ext_resource type="Texture2D" uid="uid://dtc4rdqsk6k41" path="res://assets/enemies/wolf/wolf_run4.png" id="27_3msrx"]
+[ext_resource type="Texture2D" uid="uid://bel85krnxrh53" path="res://assets/enemies/wolf/wolf_run5.png" id="28_adkh6"]
+[ext_resource type="Texture2D" uid="uid://2603jj4v27fk" path="res://assets/enemies/wolf/wolf_run6.png" id="29_jp2wo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60sqr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5awda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8rodg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hxn4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tjaio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t3ba3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pcg4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qnah1")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2cr1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u1yu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mi420")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1kwkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e7yqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fqw6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dag1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v31fk")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_5dldl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3fh80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3vrhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ylqew")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_kyju4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_s0ldg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ug1yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7uk64")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_a0unq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kokem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_leb3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3msrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_adkh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jp2wo")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yu8sf"]
+size = Vector2(35, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxuig"]
+size = Vector2(105, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3in5g"]
+size = Vector2(57, 20)
+
+[node name="Wolf" type="CharacterBody2D"]
+script = ExtResource("1_7m52j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_60sqr")
+animation = &"Attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 6)
+shape = SubResource("RectangleShape2D_yu8sf")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(0.5, 6)
+shape = SubResource("RectangleShape2D_wxuig")
+
+[node name="AttackDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetection"]
+position = Vector2(-0.5, 6)
+shape = SubResource("RectangleShape2D_3in5g")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="AttackDetection" to="." method="_on_attack_detection_body_entered"]
+[connection signal="body_exited" from="AttackDetection" to="." method="_on_attack_detection_body_exited"]

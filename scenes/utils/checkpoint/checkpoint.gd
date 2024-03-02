@@ -1,31 +1,39 @@
 extends Area2D
 
-@export var spawnpoint = false
+@export var spawnpoint := false
 
-var active_checkpoint = false
+@onready var anim := $AnimatedSprite2D
 
-@onready var anim = $AnimatedSprite2D
+var active_checkpoint := false
 
+# --------------------
+# Built-in Methods
+# --------------------
 
 func _ready() -> void:
 	if spawnpoint:
 		self.visible = false
-		activate_checkpoint()
+		__activate_checkpoint()
 
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == "Player"&&!active_checkpoint:
+		__activate_checkpoint()
 
-func activate_checkpoint() -> void:
+func __activate_checkpoint() -> void:
 	if Global.current_checkpoint:
-		Global.current_checkpoint.deactivate()
+		Global.current_checkpoint.__deactivate()
 	Global.current_checkpoint = self
 	active_checkpoint = true
 	anim.play("Saved")
 
-
-func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player" && !active_checkpoint:
-		activate_checkpoint()
-
-
-func deactivate() -> void:
+func __deactivate() -> void:
 	active_checkpoint = false
 	anim.stop()
+	
+# --------------------
+# Public Methods
+# --------------------
+
+# --------------------
+# Private methods
+# --------------------

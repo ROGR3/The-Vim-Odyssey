@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://5w7du1lwscsn"]
+
+[ext_resource type="Script" path="res://scenes/utils/tilemaps/tiles/moving_platform.gd" id="1_2boar"]
+[ext_resource type="Texture2D" uid="uid://dbjiya5qpi0em" path="res://assets/tiles/moving_tiles/moving_tile_2x1.png" id="2_5haco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lhiw"]
+size = Vector2(32, 16)
+
+[node name="Moving Platform 2x1" type="AnimatableBody2D"]
+script = ExtResource("1_2boar")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5haco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4lhiw")

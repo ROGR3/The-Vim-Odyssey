@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqamtxrt00tsc"]
 
 [ext_resource type="Script" path="res://scenes/utils/projectile/projectile.gd" id="1_k2p77"]
-[ext_resource type="FontFile" uid="uid://but51c7bt6qjb" path="res://ARCADECLASSIC.TTF" id="2_ctcgg"]
+[ext_resource type="FontFile" uid="uid://but51c7bt6qjb" path="res://fonts/ARCADECLASSIC.TTF" id="2_ctcgg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lam1k"]
 size = Vector2(7, 10)
@@ -9,7 +9,7 @@ size = Vector2(7, 10)
 [sub_resource type="FontVariation" id="FontVariation_ag0x3"]
 base_font = ExtResource("2_ctcgg")
 
-[node name="Projectile" type="Area2D"]
+[node name="Projectile" type="Area2D" groups=["Projectile"]]
 script = ExtResource("1_k2p77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

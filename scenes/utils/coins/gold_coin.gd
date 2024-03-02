@@ -1,18 +1,20 @@
 extends Area2D
 
+@onready var anim := $AnimatedSprite2D
 
-@onready var anim = $AnimatedSprite2D
+# --------------------
+# Built-in Methods
+# --------------------
 
-func _ready():
-	loop_anim()
-	
-func _on_body_entered(body):
+func _on_body_entered(body: CharacterBody2D) -> void:
 	if body.name == "Player":
-		body.coin_collected(10)
+		body.coin_collected(99)
 		queue_free()
 
+# --------------------
+# Public Methods
+# --------------------
 
-func loop_anim():
-	anim.play("default")
-	await get_tree().create_timer(2).timeout
-	loop_anim()
+# --------------------
+# Private methods
+# --------------------

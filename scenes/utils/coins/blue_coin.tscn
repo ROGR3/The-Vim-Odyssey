@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://djyk75lj8vlhb"]
+[gd_scene load_steps=5 format=3 uid="uid://djyk75lj8vlhb"]
 
 [ext_resource type="Texture2D" uid="uid://d31dcagptuqgj" path="res://assets/miscs/coins/blue-coin.png" id="1_fw7lh"]
 [ext_resource type="Script" path="res://scenes/utils/coins/blue_coin.gd" id="1_ldpmc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkdvb"]
-radius = 7.0
+radius = 6.0
+
+[sub_resource type="Curve" id="Curve_58eqh"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="BlueCoin" type="Area2D"]
 script = ExtResource("1_ldpmc")
@@ -13,6 +17,23 @@ script = ExtResource("1_ldpmc")
 shape = SubResource("CircleShape2D_rkdvb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.19209e-07, -1.19209e-07)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_fw7lh")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 20
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.8
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 200)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_58eqh")
+color = Color(0.168627, 0.74902, 1, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
